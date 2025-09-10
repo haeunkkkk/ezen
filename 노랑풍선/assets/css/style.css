@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --black-color: #222;
+    --white-color: #fff;
+    --primary-color: #ffc72c;
+    --gray-color: #777;
+}
+
+body {
+    color: var(--black-color);
+}
+
+/* common css  */
+.container {
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title {
+    font-size: 2.25rem;
+    margin-bottom: 3.5rem;
+    letter-spacing: -0.045rem;
+    font-family: "SCoreDream";
+    font-weight: 500;
+}
+
+
+/* kv section  */
+.kv-sec {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.kv-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.kv-title {
+    font-size: 4.625rem;
+    padding-top: 26rem;
+    color: #fff;
+    letter-spacing: -0.38rem;
+    line-height: 1.4;
+    font-family: "SCoreDream";
+    font-weight: 500;
+}
+
+.kv-title span {
+    display: block;
+}
+
+/* business section  */
+.business-sec {
+    background-image: url("../../assets/images/bg_main_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.business-contents {
+    color: #fff;
+    padding-top: 22.5rem;
+}
+
+.business-title {
+    font-size: 2.25rem;
+    line-height: 1.6;
+    margin-bottom: 8.625rem;
+    font-family: "SCoreDream";
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.business-title span {
+    display: block;
+}
+
+.business-counter-wrap {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.business-counter {
+    text-align: center;
+}
+
+.counter-desc {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.counter {
+    font-size: 5.25rem;
+    margin-top: 1rem;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: -0.262rem;
+}
+
+.counter-add {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+.pc-none {
+    display: none;
+}
+
+
+/* slogan section  */
+.slogan-sec {
+    padding-top: 6.25rem;
+}
+
+.slogan-title {
+    text-align: center;
+}
+
+.slogan-wrap {
+    overflow: hidden;
+}
+
+.slogan-list {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.slogan-list:last-child {
+    margin-bottom: 0;
+}
+
+
+.slogan-list>div {
+    width: 49%;
+}
+
+.slogan-img {
+    height: 440px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slogan-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slogan-list-desc {
+    font-size: 1.5rem;
+    letter-spacing: -0.075rem;
+    color: var(--gray-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.slogan-list-title {
+    font-size: 3rem;
+    letter-spacing: -0.15rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.slogan {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02rem;
+    color: var(--primary-color);
+}
+
+.slogan-text {
+    padding-left: 3rem;
+    word-break: keep-all;
+}
+
+.slogan-list.reverse {
+    flex-direction: row-reverse;
+}
+
+.slogan-list.reverse .slogan-text {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 3rem;
+}
+
+
+/* package section  */
+.package-sec {
+    padding-top: 6.25rem;
+}
+
+.package-title {
+    text-align: center;
+}
+
+.package-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.package-item {
+    width: calc((100% - 7rem) / 8);
+    height: 31.25rem;
+    background-image: url("../../assets/images/bg_category_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    position: relative;
+    color: var(--white-color);
+    flex-grow: 1;
+    flex-shrink: 1;
+    transition: width 0.5s;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+
+.package-item::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+.package-item-text {
+    z-index: 2;
+    text-align: center;
+    padding: 0 10px;
+    position: absolute;
+    top: 44%;
+    width: 100%;
+}
+
+.package-item-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.package-item-desc {
+    font-size: 1rem;
+    opacity: 0;
+    line-height: 1.8;
+}
+
+@media (hover: hover) {
+    .package-item:hover {
+        width: 20%;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .package-item:hover::after {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .package-item:hover .package-item-text {
+        top: 40%;
+        transition-delay: 0.3s;
+    }
+
+    .package-item:hover .package-item-title {
+        font-size: 2.25rem;
+    }
+
+    .package-item:hover .package-item-desc {
+        opacity: 1;
+        transition: opacity 0.3s;
+        transition-delay: 0.3s;
+    }
+}
+
+
+@media(max-width: 1023px) {
+
+    /* common  */
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1.38rem;
+    }
+
+    /* kv section  */
+    .kv-title {
+        font-size: 2rem;
+    }
+
+    /* business section  */
+    .business-contents {
+        padding-top: 36.94vw;
+        padding-bottom: 17.22vw;
+    }
+
+    .business-title {
+        font-size: 1.5rem;
+        margin-bottom: 5vw;
+    }
+
+    .business-counter-wrap {
+        flex-direction: column;
+    }
+
+    .business-counter {
+        text-align: left;
+    }
+
+    .counter-desc {
+        font-size: 1rem;
+    }
+
+    .counter {
+        font-size: 1.75rem;
+        margin-top: 2.22vw;
+        letter-spacing: -0.087rem;
+    }
+
+    .counter-add {
+        font-size: 0.75rem;
+        margin-top: 2.22vw;
+    }
+
+    .pc-none {
+        display: block;
+    }
+
+
+    /* slogan section  */
+    .slogan-sec {
+        padding-top: 3.5rem;
+    }
+
+    .slogan-title {
+        text-align: left;
+    }
+
+    .slogan-list-desc {
+        font-size: 1rem;
+    }
+
+    .slogan-list-title,
+    .slogan {
+        font-size: 1.375rem;
+    }
+
+    .slogan-list .slogan-img {
+        width: 59%;
+        height: 360px;
+    }
+
+    .slogan-list .slogan-text {
+        width: 39%;
+    }
+
+
+    /* package section  */
+    .package-sec {
+        padding-top: 3.5rem;
+    }
+
+    .package-title {
+        text-align: left;
+    }
+
+    .package-wrap {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .package-item {
+        width: calc((100% - 1rem) / 2);
+        height: auto;
+        aspect-ratio: 1 /1;
+    }
+
+    .package-item-title {
+        font-size: 1.125rem;
+    }
+
+    .package-item-desc {
+        display: none;
+    }
+}
+
+@media(max-width: 749px) {
+
+    /* business section  */
+    .business-title {
+        margin-bottom: 11.11vw;
+    }
+
+    /* slogan section  */
+    .slogan-list,
+    .slogan-list.reverse {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .slogan-list .slogan-img,
+    .slogan-list .slogan-text {
+        width: 100%;
+    }
+
+    .slogan-list .slogan-img {
+        height: auto;
+    }
+
+    .slogan-text,
+    .slogan-list.reverse .slogan-text {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+
+}
