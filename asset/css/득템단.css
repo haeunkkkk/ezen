@@ -45,7 +45,7 @@
 
 .container1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1440px;
     width: 100%;
@@ -56,11 +56,16 @@
 
 
 .main-left{
+    width: 60%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-around;
 }
+
+.main-text{
+        margin-left: 20px;
+    }
 
 .main-title {
     color: var(--white-color);
@@ -79,7 +84,9 @@
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    margin-left: 20px;
 }
+
 .main-cta a{
     text-decoration: none;
     display: inline-block;
@@ -98,6 +105,17 @@
 .main-cta2 {
     color: var(--white-color);
     border: 1px solid var(--primary-color);
+}
+
+
+.main-right {
+  text-align: right; 
+  margin-right: 20px;
+}
+
+.main-right img{
+    width: 80%;
+    height: 80%;
 }
 
 /* main2영역 */
@@ -233,10 +251,8 @@
 
 
 
-@media (max-width: 1023px) {
+@media (max-width: 1028px) {
     /* main 영역 */
-    
-
     .main-title{
         font-size: 40px;
     }
@@ -249,12 +265,10 @@
     }
 
     .main-right img{
-        width: 60%;
-        height: 50%;
-        margin-left: 40%;
-    }
-    .main-cta1{
-        margin-left: 30px;
+        width: 90%;
+        height: 90%;
+        /* margin-left: 40%; */
+        margin-right: 30px;
     }
 
 
@@ -265,21 +279,34 @@
     }
 }
 
-@media (max-width: 892px) {
+
+
+
+@media (max-width: 952px) {
+    /* main1영역 */
     .container1 {
         display: flex;
         flex-direction: column-reverse;
     }
 
+    .main-left{
+        width: 100%;
+    }
+
     .main-text{
         margin: 0 auto;
         text-align: center;
+        padding-top: 20px;
+    }
+
+    .main-cta{
+        margin: 0 auto;
     }
 
     .main-cta a{
         font-size: 18px;
         padding: 20px 30px;
-        margin-bottom: 50%;
+        margin-bottom: 100px;
     }
 
      .main-right{
@@ -287,30 +314,19 @@
     }
 
     .main-right img{
-        width: 100%;
-        height: 100%;
+        width: 300px;
+        height: auto;
         margin: 0 auto;
-        padding-top: 20%;
+        padding-top: 100px;
         padding-right: 10px;
     }
 }
 
 @media (max-width: 768px) {
     /* main 영역 */
-    .main-title{
-        font-size: 36px;
-        margin: 0 auto;
+    .main-right img{
+    
     }
-
-    .main-desc{
-        font-size: 14px;
-        margin: 0 auto;
-    }
-    .main-cta a{
-        font-size: 16px;
-        padding: 20px 25px;
-    }
-
 
     /* main2 영역 */
     .main2-title {
