@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더 만들기</title>
+    <link rel="stylesheet" href="./asset/css/헤더.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Logo</h1>
+            <button type="button" class="hamburger-btn">
+                버튼
+            </button>
+            <nav class="header-nav">
+
+                <button class="close-btn">X</button>
+                <ul class="menu">
+                    <li>내폰팔기</li>
+                    <li>요금제</li>
+                    <li>문의하기</li>
+                    <li>화잇팅</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="sec sec01">섹션1</section>
+        <section class="sec sec02">섹션2</section>
+        <section class="sec sec03">섹션3</section>
+        <section class="sec sec04">섹션4</section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script>
+        let btn = document.querySelector(".hamburger-btn");
+        let menu = document.querySelector(".header-nav");
+        // btn.addEventListener('click', function(){
+        //     menu.classList.toggle("on")
+        // });
+
+        let closeBtn = document.querySelector(".close-btn");
+        btn.addEventListener('click', function(){
+            menu.classList.add("on");
+        });
+    
+        closeBtn.addEventListener('click', function(){
+            menu.classList.remove("on");
+        });
+    </script>
+
+
+</body>
+</html>
