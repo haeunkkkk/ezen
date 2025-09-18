@@ -35,6 +35,8 @@
 body{
     font-family: 'Pretendard';
     background-color: #f4f4f4;
+    overflow-x: hidden;
+
 }
 
 .title-desc {
@@ -53,6 +55,9 @@ body{
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 
 /* header영역 */
@@ -86,10 +91,11 @@ body{
     gap: 72px;
 }
 
-.menu li{
+.menu li a{
     list-style-type: none;
     font-size: 24px;
     color: var(--black-color);
+    text-decoration: none;
 }
 
 .menu li:hover{
@@ -116,6 +122,10 @@ body{
     background-color: var(--bg-color);
     color: var(--white-color);
 }
+
+
+
+
 
 /* main1 영역 */
 .main1 {
@@ -201,6 +211,10 @@ body{
     width: 80%;
     height: 80%;
 }
+
+
+
+
 
 
 
@@ -456,10 +470,14 @@ body{
     }
 
     .steps {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        align-items: center;
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;        
+        gap: 20px;
+        justify-content: center; 
+    }
+
+    .step1 {
+        flex: 0 1 calc(20% - 20px);
     }
 
     .step-imgb {
@@ -467,6 +485,9 @@ body{
         border-radius: 20px;
         padding: clamp(40px, 4vw, 65px) clamp(30px, 4vw, 60px);
         background-color: var(--white-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .step-img {
@@ -474,10 +495,20 @@ body{
         height: clamp(3.125rem, 1.8205rem + 4.7329vw, 7.5rem);
     }
 
+    
+    .step-title{
+        font-family: 'Tmon';
+        font-size: clamp(0.75rem, 0.6009rem + 0.5409vw, 1.25rem);
+        font-weight: 700;
+        margin-top: 26px;
+        color: var(--bg-color);
+        text-align: center;
+    }
+
     .step-text {
         font-size: clamp(0.75rem, 0.6009rem + 0.5409vw, 1.25rem);
         font-weight: 500;
-        margin-top: 26px;
+        margin-top: 20px;
         color: var(--black-color);
         text-align: center;
     }
@@ -495,17 +526,35 @@ body{
         margin-top: 3px;
     } 
 
-    .fa-play {
-        font-size: 20px;
-        text-align: center;
+
+    .now-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-
-    .now{
+    .now-btn a{
+        text-decoration: none;
+        font-size: clamp(12px, 2vw, 20px);
+        color: #333333;
+        border-radius: clamp(10px, 2vw, 20px);
+        background-color: var(--primary-color);
+        padding: 1rem clamp(1rem, 6vw, 8rem);
+        display: inline-block;
+        transition: 0.3s all ease-in-out;
         text-align: center;
         margin-top: 100px;
         font-weight: 700;
+        width: 33%;
     }
+
+    .now-btn a:hover{
+        background-color: var(--bg-color);
+        color: var(--white-color);
+    }
+    
+
+
 
 
 /* main5영역 */
@@ -518,6 +567,8 @@ body{
 
 @media (max-width: 1028px) {
     /* header영역 */
+    
+
     .logo{
         font-size: 24px;
     }
@@ -543,16 +594,18 @@ body{
     .header-nav{
         position: absolute;
         top: 100px;
-        right: 0;
+        right: -300px;
         width: 300px;
-        height: 230px;
-        transform: translateX(100%); 
-        transition: 0.3s all ease-in-out;
+        height: 320px;
+        /* transform: translateX(100%);  */
+        transition: right 0.3s ease-in-out;
+        border-radius: 0 0 0 20px;
     }
 
     .header-nav.on{
-        display: block;
-        transform: translateX(0);
+        right: 0;
+        /* display: block; */
+        /* transform: translateX(0); */
     }
 
     .close-btn{
@@ -563,7 +616,7 @@ body{
     .menu{
         flex-direction: column;
         gap: 30px;
-        margin-left: 30px;
+        margin-left: 40px;
     }
 
 
@@ -606,6 +659,10 @@ body{
         margin-right: 30px;
     }
 
+
+
+
+
     /* main2영역 */
     .main2-title {
         font-size: 36px;
@@ -618,6 +675,8 @@ body{
     .phonecolor{
         padding: 8px;
     }
+
+
 
 
 
@@ -637,8 +696,8 @@ body{
     }
 
     .card2-re img{
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
     }
 
   
@@ -664,21 +723,11 @@ body{
 
 
     /* main4영역 */
-    .steps {
-        grid-template-columns: repeat(9, 2fr);
-        gap: 10px;
+    .step1 {
+        flex: 0 1 calc(33.333% - 20px);
     }
 
-    .steps .step1 {
-        grid-column: span 2; /* 카드 그대로 2칸 차지 */
-    }
-
-
-    .fa-play{
-        display: none;
-    }
-
-
+    
 }
 
 
@@ -751,6 +800,30 @@ body{
     .card1{
         padding: 20px;
     }
+
+
+
+
+
+    /* main4영역 */
+    .step1 {
+        flex: 0 1 calc(50% - 20px);
+        max-width: 250px;
+    }
+
+    .now-btn a{
+        margin-bottom: 100px;
+    }
+
+
+
+    /* main5영역 */
+    .main5-text{
+        margin-top: 100px;
+    }
+
+
+
 }
 
 
@@ -758,4 +831,9 @@ body{
 @media (max-width: 441px) {
     /* main2영역 */
    
+
+
+
+    /* main4영역 */
+    
 }

@@ -18,42 +18,59 @@
 
                 <button class="close-btn">X</button>
                 <ul class="menu">
-                    <li>내폰팔기</li>
-                    <li>요금제</li>
-                    <li>문의하기</li>
-                    <li>화잇팅</li>
+                    <li><a href="#menu1">내폰팔기</a></li>
+                    <li><a href="#menu2">내폰팔기</a></li>
+                    <li><a href="#menu3">내폰팔기</a></li>
+                    <li><a href="#menu4">내폰팔기</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="sec sec01">섹션1</section>
-        <section class="sec sec02">섹션2</section>
-        <section class="sec sec03">섹션3</section>
-        <section class="sec sec04">섹션4</section>
+        <section class="sec sec01" id="menu1">섹션1</section>
+        <section class="sec sec02 " id="menu2">섹션2</section>
+        <section class="sec sec03 " id="menu3">섹션3</section>
+        <section class="sec sec04" id="menu4">섹션4</section>
     </main>
 
     <footer>
 
     </footer>
 
-
+    <script src="./asset/js/jquery-3.7.1.min.js"></script>
     <script>
-        let btn = document.querySelector(".hamburger-btn");
-        let menu = document.querySelector(".header-nav");
+        // let btn = document.querySelector(".hamburger-btn");
+        // let menu = document.querySelector(".header-nav");
         // btn.addEventListener('click', function(){
         //     menu.classList.toggle("on")
         // });
 
-        let closeBtn = document.querySelector(".close-btn");
-        btn.addEventListener('click', function(){
-            menu.classList.add("on");
+        // $(function(){
+        //     $(".hamburger-btn").click(function(){
+        //         $(".header-nav").toggleClass("on")
+        //     });
+        // });
+
+        $(function(){
+            $(".hamburger-btn").click(function(){
+                $(".header-nav").addClass("on")
+            });
+
+            $(".close-btn").click(function(){
+                $(".header-nav").removeClass("on")
+            });
+
         });
+
+        // let closeBtn = document.querySelector(".close-btn");
+        // btn.addEventListener('click', function(){
+        //     menu.classList.add("on");
+        // });
     
-        closeBtn.addEventListener('click', function(){
-            menu.classList.remove("on");
-        });
+        // closeBtn.addEventListener('click', function(){
+        //     menu.classList.remove("on");
+        // });
     </script>
 
 

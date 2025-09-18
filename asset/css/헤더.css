@@ -12,6 +12,9 @@
     align-items: center;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /* header영역 */
     .header-container{
