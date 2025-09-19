@@ -634,6 +634,9 @@ html{
     }
 
 
+
+
+
     /* main6영역 */
     .event-card{
         margin-top: 70px;
@@ -660,7 +663,7 @@ html{
     .event-card h3{
         font-family: 'Tmon';
         color: var(--black-color);
-        font-size: 24px;
+        font-size: clamp(1rem, 0.8469rem + 0.5442vw, 1.5rem);
     }
     .ecard1{
         border-radius: 20px;
@@ -688,7 +691,7 @@ html{
     }
 
     .event-card1-desc p{
-        font-size: 20px;
+        font-size: clamp(0.75rem, 0.5969rem + 0.5442vw, 1.25rem);
         color: var(--black-color);
         margin-top: 5px;
     }
@@ -943,6 +946,13 @@ html{
     }
 
 
+
+
+    /* main5영역 */
+
+    
+
+
     /* main6영역 */
     .event-card{
         margin: 30px 20px 0 20px;
@@ -954,9 +964,17 @@ html{
         ;
     }
 
+    .event-card1 img{
+        top: 30px;
+    }
+
+    .event-card3 img{
+        top: 30px;
+    }
+
     .event-card2 img{
-        top: 10px;
-        left: 600px;
+        top: 0px;
+        left: 500px;
     }
 
     .edesc2{
@@ -968,6 +986,8 @@ html{
     .main6{
         margin-bottom: 100px;
     }
+
+    
 
     
 }
@@ -1017,6 +1037,12 @@ html{
     .gbtext{
         width: 40%;
     }
+
+    /* main6영역 */
+    .event-card2 img{
+        left: 400px;
+    }
+
 }
 
 
@@ -1024,9 +1050,8 @@ html{
 
 @media (max-width: 768px) {
     /* main1 영역 */
-    /* .main-right img{
     
-    } */
+
     /* main2영역 */
     .main2-title {
         font-size: 32px;
@@ -1064,19 +1089,32 @@ html{
         margin-top: 100px;
     }
 
-    
+    /* main6영역 */
+    .event-card2 img{
+        left: 300px;
+    }
+
 
 
 }
 
 
 
-@media (max-width: 441px) {
+@media (max-width: 500px) {
     /* main2영역 */
    
-
+    /* main3 영역 */
+  
 
 
     /* main4영역 */
+    
+
+
+
+    /* main6영역 */
+    .event-card2 img{
+        left: 100px;
+    }
     
 }
