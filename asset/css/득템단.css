@@ -192,7 +192,7 @@ html{
 }
 .main-cta2:hover{
     background-color: var(--white-color);
-    border: none;
+    border: 1px solid var(--white-color);
     color: var(--black-color);
 }
 
@@ -558,6 +558,221 @@ html{
 
 
 /* main5영역 */
+    .main5-card-sec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-card{
+        border: 1px solid var(--gray-color);
+        border-radius: 20px;
+        padding: 30px;
+        width: 24%;
+        height: 430px;
+        position: relative;
+        margin-top: 68px;
+        margin-left: 20px;
+        background-color: var(--white-color);
+        transition: 0.2s all ease-in-out;
+    }
+
+    .review-card:hover{
+        border: 1px solid var(--bg-color);
+    }
+
+    .review-card-title{
+        font-size: 20px;
+        color: var(--black-color);
+        border-bottom: 1px solid var(--gray-color);
+        padding-bottom: 10px;
+        margin-top: 60px;
+        font-weight: 600;
+        transition: 0.2s all ease-in-out;
+    }
+
+    .review-card:hover .review-card-title{
+        border-bottom: 1px solid var(--bg-color);
+    }
+   
+
+    .review-card-img{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 26px;
+        right: 26px;
+    }
+
+    .review-card:hover .review-card-img{
+        animation: shakeRotate 0.5s ease-in-out 1;
+    }
+    
+    @keyframes shakeRotate {
+        0%   { transform: rotate(0deg); }
+        25%  { transform: rotate(3deg); }
+        50%  { transform: rotate(-3deg); }
+        75%  { transform: rotate(3deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    .review-card-name{
+        color: var(--black-color);
+        padding: 10px 0;
+    }
+
+    .review-card-star{
+        color: var(--primary-color);
+        padding-bottom: 25px;
+    }
+        
+    .review-card-desc{
+        font-size: 20px;
+        color: var(--black-color);
+        padding-bottom: 25px;
+        line-height: 1.6;
+    }
+
+
+    /* main6영역 */
+    .event-card{
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        grid-template-areas: 
+        "img1 img1 img2 img2"
+        "img3 img3 img2 img2"
+        ;
+    }
+
+    
+    .event-card1{
+        grid-area: img1;
+    }
+    .event-card2{
+        grid-area: img2;
+    }
+    .event-card3{
+        grid-area: img3;
+    }
+    
+    .event-card h3{
+        font-family: 'Tmon';
+        color: var(--black-color);
+        font-size: 24px;
+    }
+    .ecard1{
+        border-radius: 20px;
+        background-color: #E3E3E3;
+        position: relative;
+        border: 2px solid #E3E3E3;
+    }
+
+    .event-card1 img{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 69px;
+        right: 104px
+    }
+
+    .event-card1-desc{
+        text-align: center;
+    }
+
+    .edesc1{
+        margin-right: 300px;
+        margin-top: 64px;
+        margin-bottom: 48px;
+    }
+
+    .event-card1-desc p{
+        font-size: 20px;
+        color: var(--black-color);
+        margin-top: 5px;
+    }
+
+    .event-card2 img{
+        width: 328px;
+        height: 248px;
+        position: absolute;
+        top: 50px;
+        left: 189px;
+        
+    }
+
+    .edesc2{
+        margin-top: 350px;
+    }
+
+    .event-card3 img{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 69px;
+        left: 105px;
+    }
+
+    .edesc3{
+        margin-left: 300px;
+        margin-top: 64px;
+        margin-bottom: 48px;
+    }
+
+    .event-card1:hover{
+        border: 2px solid var(--bg-color);
+    }
+    .event-card2:hover{
+        border: 2px solid var(--bg-color);
+    }
+    .event-card3:hover{
+        border: 2px solid var(--bg-color);
+    }
+
+    .event-card1:hover img{
+        animation: shakeRotate 0.5s ease-in-out 1;
+    }
+    .event-card1:hover h3{
+        color: var(--bg-color);
+    }
+    .event-card2:hover h3{
+        color: var(--bg-color);
+    }
+    .event-card3:hover h3{
+        color: var(--bg-color);
+    }
+    
+    @keyframes shakeRotate {
+        0%   { transform: rotate(0deg); }
+        25%  { transform: rotate(3deg); }
+        50%  { transform: rotate(-3deg); }
+        75%  { transform: rotate(3deg); }
+        100% { transform: rotate(0deg); }
+    }
+    .event-card2:hover img{
+        animation: shakeRotate 0.5s ease-in-out 1;
+    }
+    
+    @keyframes shakeRotate {
+        0%   { transform: rotate(0deg); }
+        25%  { transform: rotate(3deg); }
+        50%  { transform: rotate(-3deg); }
+        75%  { transform: rotate(3deg); }
+        100% { transform: rotate(0deg); }
+    }
+    .event-card3:hover img{
+        animation: shakeRotate 0.5s ease-in-out 1;
+    }
+    
+    @keyframes shakeRotate {
+        0%   { transform: rotate(0deg); }
+        25%  { transform: rotate(3deg); }
+        50%  { transform: rotate(-3deg); }
+        75%  { transform: rotate(3deg); }
+        100% { transform: rotate(0deg); }
+    }
+
 
 
 
@@ -727,6 +942,33 @@ html{
         flex: 0 1 calc(33.333% - 20px);
     }
 
+
+    /* main6영역 */
+    .event-card{
+        margin: 30px 20px 0 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "img1 img1"
+        "img3 img3"
+        "img2 img2"
+        ;
+    }
+
+    .event-card2 img{
+        top: 10px;
+        left: 600px;
+    }
+
+    .edesc2{
+        margin-right: 300px;
+        margin-top: 64px;
+        margin-bottom: 48px;
+    }
+
+    .main6{
+        margin-bottom: 100px;
+    }
+
     
 }
 
@@ -822,6 +1064,7 @@ html{
         margin-top: 100px;
     }
 
+    
 
 
 }
