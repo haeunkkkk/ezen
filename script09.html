@@ -8,7 +8,7 @@
 
 
 <style>
-    .image {
+    /* .image {
         display: none;
         width: 300px;
         height: 300px;
@@ -31,6 +31,28 @@
     }
     .box4{
         background-color: rgb(255, 115, 0);
+    } */
+
+    .list{
+        width: 200px;
+        padding: 20px;
+        border: 1px solid black;
+        display: none;
+    }
+
+    .animate-box {
+        width: 100px;
+        height: 100px;
+        
+        position: relative;
+    }
+
+    .animate-box1{
+        background-color: aquamarine;
+        margin-bottom: 50px;
+    }
+    .animate-box2{
+        background-color: rgb(255, 13, 13);
     }
 </style>
 
@@ -47,7 +69,7 @@
 
 
     <!-- fade effect -->
-    <button class="fade-in-btn">fade in</button>
+    <!-- <button class="fade-in-btn">fade in</button>
     <button class="fade-out-btn">fade out</button>
     <button class="fade-toggle-btn">fade toggle</button>
     <button class="fade-to-btn">fade to</button>
@@ -55,7 +77,36 @@
     <div class="box box1"></div>
     <div class="box box2"></div>
     <div class="box box3"></div>
-    <div class="box box4"></div>
+    <div class="box box4"></div> -->
+
+
+
+
+    <!-- slide -->
+    <button class="slide-down">메뉴 펼치기</button>
+    <button class="slide-up">메뉴 접기</button>
+    <button class="slide-toggle">메뉴 토글</button>
+
+    <ul class="list">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+
+    <!-- <button class="animate">애니메이션 버튼</button>
+    <div class="animate-box animate-box1">애니메이션 적용</div>
+    <div class="animate-box animate-box2">애니메이션 적용</div> -->
+
+
+
+    <!-- stop() -->
+
+    <button class="animate-btn">애니메이션버튼</button>
+    <button class="stop-btn">중지버튼</button>
+    <div class="animate-box animate-box1">애니메이션 적용</div>
+
 
 
     <script src="./asset/js/jquery-3.7.1.min.js"></script>
